@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>River Cross</title>
+		<link type = "text/css" rel = "stylesheet" href = "rivercross.css" />
+		
+		<script type = "text/javascript" src = "rivercross.js"></script>
+		<script>
+			/*
+				initialize
+				
+				Creates javascript objects to hold html elements.
+			*/
+			function initialize()
+			{
+				leftShoreImages = document.getElementById("leftshore").getElementsByTagName("img");
+				rightShoreImages = document.getElementById("rightshore").getElementsByTagName("img");
+				boatImages = document.getElementById("boatsection").getElementsByTagName("img");
+				boatImg = document.getElementById("boatimg");
+				leftShoreDiv = document.getElementById("leftshore");
+				riverDiv = document.getElementById("river");
+			}
+		</script>
+	</head>
+		
+	<body onload = "initialize();">
+		<div id = "mainframe">
+			<img src = "river.png" />
+			<div id = "leftshore" style = "width:35%">
+				<img onclick = "moveToBoat(leftShore[0]);" src = "cowboyeastwhite.png" />
+				<img onclick = "moveToBoat(leftShore[1]);" src = "cowboyeastwhite.png" />
+				<img onclick = "moveToBoat(leftShore[2]);" src = "cowboyeastwhite.png" />
+				<img onclick = "moveToBoat(leftShore[3]);" src = "indianeast.png" />
+				<img onclick = "moveToBoat(leftShore[4]);" src = "indianeast.png" />
+				<img onclick = "moveToBoat(leftShore[5]);" src = "indianeast.png" />
+			</div>
+			<div id = "river" style = "width:35%">
+				<span>
+					<section id = "boatsection">
+						<img onclick = "moveFromBoat(boat[0]);" />
+						<img onclick = "moveFromBoat(boat[1]);" />
+					</section>
+					<img onclick = "moveBoat();" id = "boatimg" src = "boat.png" />
+				</span>
+			</div>
+			<div id = "rightshore">
+				<img onclick = "moveToBoat(rightShore[0]);" />
+				<img onclick = "moveToBoat(rightShore[1]);" />
+				<img onclick = "moveToBoat(rightShore[2]);" />
+				<img onclick = "moveToBoat(rightShore[3]);" />
+				<img onclick = "moveToBoat(rightShore[4]);" />
+				<img onclick = "moveToBoat(rightShore[5]);" />
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+body
+{
+	background-color:black;
+}
+
+div 
+{
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+}
+
+div#mainframe 
+{
+	position:absolute;
+	left:10%;
+	top:5%;
+	width:80%;
+	height:80%;
+}
+
+div#mainframe > img
+{
+	position:absolute;
+	width:100%;
+}
+
+div#mainframe > div
+{
+	margin-top:40%;
+}
+
+section#boatsection
+{
+	position:absolute;
+	top:-50px;
+}
+
+img#boatimg
+{
+	z-index:1;
+}
